@@ -1,0 +1,27 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    rgba(94, 52, 191, 1) 0%,
+    rgba(140, 75, 213, 1) 100%
+  );
+  > header {
+    flex-shrink: 0; // 0表示不要压缩
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 66px;
+    color: #d4d4ee;
+  }
+  > main {
+    flex-grow: 1; // 让其尽量伸缩
+    display: flex;
+    flex-direction: column;
+  }
+  > footer {
+    flex-shrink: 0;
+  }
+}
