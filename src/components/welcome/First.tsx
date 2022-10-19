@@ -1,28 +1,32 @@
 import { defineComponent, ref } from "vue";
-import s from "./First.module.scss";
+import s from "./WelcomePage.module.scss";
 import moneyPot from "../../assets/icons/moneyPot.svg";
 import { RouterLink } from "vue-router";
-export const First = defineComponent({
-  setup() {
-    return () => (
-      <div class={s.wrapper}>
-        <div class={s.card}>
-          <img class={s.moneyPot} src={moneyPot} alt="" />
+import { WelcomPage } from "./welcomePage";
+export const First = () => (
+  <WelcomPage>
+    {{
+      icon: () => <img src={moneyPot} alt="" />,
+      title: () => (
+        <>
           <h2>
             会挣钱
             <br />
             还要会省钱
           </h2>
-        </div>
-        {/* 操作按钮 */}
-        <div class={s.actions}>
+        </>
+      ),
+      buttons: () => (
+        <>
           <RouterLink class={s.fake} to="start">
             跳过
           </RouterLink>
-          <RouterLink to="welcome/2">下一页</RouterLink>
+          <RouterLink to="2">下一页</RouterLink>
           <RouterLink to="start">跳过</RouterLink>
-        </div>
-      </div>
-    );
-  },
-});
+        </>
+      ),
+    }}
+  </WelcomPage>
+);
+
+First.displayName = "First"; // 避免控制台报错
