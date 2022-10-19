@@ -1,13 +1,13 @@
 import { defineComponent, ref } from "vue";
 import { RouterView } from "vue-router";
 import s from "./Welcome.module.scss";
-import logo from "../assets/icons/game.svg";
+import banner from "../assets/icons/banner.svg";
 export const Welcome = defineComponent({
   setup() {
     return () => (
       <div class={s.wrapper}>
         <header>
-          <img src={logo} />
+          <img src={banner} />
           <h1>记一笔</h1>
         </header>
         <main>
