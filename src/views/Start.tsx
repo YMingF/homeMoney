@@ -1,5 +1,6 @@
 import { defineComponent } from "vue";
 import { Button } from "../shared/Button";
+import { FloatButton } from "../shared/FloatButton";
 import s from "./Start.module.scss";
 export const Start = defineComponent({
   setup(props, context) {
@@ -13,6 +14,7 @@ export const Start = defineComponent({
             测试
           </Button>
         </div>
+        <FloatButton></FloatButton>
       </div>
     );
   },
