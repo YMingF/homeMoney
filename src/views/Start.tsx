@@ -14,7 +14,7 @@ export const Start = defineComponent({
             测试
           </Button>
         </div>
-        <FloatButton></FloatButton>
+        <FloatButton IconName="add"></FloatButton>
       </div>
     );
   },
