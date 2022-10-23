@@ -8,8 +8,6 @@ export const WelcomPage = defineComponent({
           {slots.icon?.()}
           {slots.title?.()}
         </div>
-        {/* 操作按钮 */}
-        <div class={s.actions}>{slots.buttons?.()}</div>
       </div>
     );
   },
