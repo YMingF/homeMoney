@@ -1,10 +1,14 @@
-import s from "../WelcomePage.module.scss";
-import chart from "../../../assets/icons/chart.svg";
 import { WelcomPage } from "../welcomePage";
 export const Third = () => (
   <WelcomPage>
     {{
-      icon: () => <img class={s.moneyPot} src={chart} alt="" />,
+      icon: () => (
+        <>
+          <svg>
+            <use xlinkHref="#chart"></use>
+          </svg>
+        </>
+      ),
       title: () => (
         <h2>
           每日提醒

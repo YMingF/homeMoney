@@ -1,10 +1,14 @@
-import s from "../WelcomePage.module.scss";
-import cloud from "../../../assets/icons/cloud.svg";
 import { WelcomPage } from "../welcomePage";
 export const Fourth = () => (
   <WelcomPage>
     {{
-      icon: () => <img class={s.moneyPot} src={cloud} alt="" />,
+      icon: () => (
+        <>
+          <svg>
+            <use xlinkHref="#cloud"></use>
+          </svg>
+        </>
+      ),
       title: () => (
         <h2>
           每日提醒

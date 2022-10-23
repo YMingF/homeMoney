@@ -7,7 +7,9 @@ export const Welcome = defineComponent({
     return () => (
       <div class={s.wrapper}>
         <header>
-          <img src={banner} />
+          <svg>
+            <use xlinkHref="#banner"></use>
+          </svg>
           <h1>记一笔</h1>
         </header>
         <main style="position:relative">

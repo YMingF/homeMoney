@@ -1,10 +1,14 @@
-import { defineComponent, ref } from "vue";
-import moneyPot from "../../../assets/icons/moneyPot.svg";
 import { WelcomPage } from "../welcomePage";
 export const First = () => (
   <WelcomPage>
     {{
-      icon: () => <img src={moneyPot} alt="" />,
+      icon: () => (
+        <>
+          <svg>
+            <use xlinkHref="#moneyPot"></use>
+          </svg>
+        </>
+      ),
       title: () => (
         <>
           <h2>

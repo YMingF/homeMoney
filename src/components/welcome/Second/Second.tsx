@@ -3,7 +3,13 @@ import { WelcomPage } from "../welcomePage";
 export const Second = () => (
   <WelcomPage>
     {{
-      icon: () => <img src={clock} alt="" />,
+      icon: () => (
+        <>
+          <svg>
+            <use xlinkHref="#clock"></use>
+          </svg>
+        </>
+      ),
       title: () => (
         <h2>
           每日提醒
