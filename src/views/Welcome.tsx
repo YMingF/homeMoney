@@ -1,9 +1,15 @@
-import { defineComponent, ref, Transition, VNode } from "vue";
+import { defineComponent, ref, Transition, VNode, watchEffect } from "vue";
 import { RouteLocationNormalizedLoaded, RouterView } from "vue-router";
 import s from "./Welcome.module.scss";
 import banner from "../assets/icons/banner.svg";
+import { useSwipe } from "../hooks/useSwipe";
 export const Welcome = defineComponent({
   setup() {
+    const main = ref<HTMLElement | null>(null);
+    const { direction } = useSwipe(main);
+    watchEffect(() => {
+      console.log(direction.value);
+    });
     return () => (
       <div class={s.wrapper}>
         <header>
@@ -12,7 +18,7 @@ export const Welcome = defineComponent({
           </svg>
           <h1>记一笔</h1>
         </header>
-        <main style="position:relative">
+        <main ref={main} style="position:relative">
           <RouterView name="main">
             {({
               Component: Content,
