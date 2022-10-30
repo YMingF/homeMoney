@@ -4,7 +4,8 @@
   --welcome-bg-start: rgba(94, 52, 191, 1);
   --welcome-bg-end: rgba(140, 75, 213, 1);
   --welcome-nav-height: 64px;
-  --z-index-bottom-nav: 10;
+  --z-index-bottom-nav: 8;
+  --z-index-overlay: 16; // 浮层的zIndex
   --transition-duration: 0.5s;
   --button-bg: #5c338e;
   --button-text: white;
@@ -15,4 +16,8 @@
   --navbar-bg-start: rgba(94, 52, 191, 1);
   --navbar-bg-end: rgba(140, 75, 213, 1);
   --navbar-text: white;
+  --overlay-mask-bg: rgba(0, 0, 0, 0.5);
+  --top-save-area-height: 24px;
+  --overlay-user-bg: #5c33be;
+  --overlay-user-text: white;
 }
