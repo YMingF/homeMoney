@@ -24,18 +24,40 @@
   }
 }
 .buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "n1 n2 n3 d"
+    "n4 n5 n6 d"
+    "n7 n8 n9 s"
+    "n0 n0 nd s";
+  grid-auto-rows: 48px;
+  grid-auto-columns: 1fr;
   border-top: 1px solid var(--button-border-color);
   > button {
     border: none;
     border-right: 1px solid var(--button-border-color);
     border-bottom: 1px solid var(--button-border-color);
-    width: 25%;
-    height: 64px;
     background: transparent;
-    &:nth-child(4n) {
+    @for $n from 1 through 9 {
+      &:nth-child(#{$n}) {
+        grid-area: n($n);
+      }
+    }
+    &:nth-child(10) {
+      grid-area: d;
+    }
+    &:nth-child(11) {
+      grid-area: n0;
+    }
+    &:nth-child(12) {
+      grid-area: nd;
+    }
+    &:nth-child(13) {
+      grid-area: s;
+      background: var(--button-bg-primary);
+      color: var(--button-text-primary);
       border-right: none;
+      border-bottom: none;
     }
   }
 }
