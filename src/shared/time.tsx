@@ -1,6 +1,6 @@
 export const time = (date = new Date()) => {
   const api = {
-    formate: (pattern: string) => {
+    format: (pattern = "YYYY-MM-DD") => {
       const year = date.getFullYear();
       const month = date.getMonth() + 1;
       const day = date.getDate();
