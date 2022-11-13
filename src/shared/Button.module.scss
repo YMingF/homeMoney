@@ -6,4 +6,11 @@
   background-color: var(--button-bg);
   border-radius: var(--button-radius);
   height: var(--button-height);
+  &.primary {
+  }
+  &.danger {
+    background: var(--button-bg-danger);
+  }
+  &.normal {
+  }
 }
