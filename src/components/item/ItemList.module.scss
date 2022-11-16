@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   background: var(--overlay-mask-bg);
   &_inner {
     background: var(--bg);
@@ -15,6 +14,17 @@
       color: var(--dialog-header-text);
     }
     > main {
+    }
+  }
+}
+.actions {
+  text-align: right;
+  button {
+    border: none;
+    background: transparent;
+    padding: 8px 16px;
+    & + & {
+      margin-left: 16px;
     }
   }
 }
